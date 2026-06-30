@@ -1,1 +1,20 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=4.1.0"
+    }
+  }
+}
 
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  subscription_id = "491cb43e-b016-488a-abf7-ab499d51bfee"
+  features {}
+}
+
+# Create a resource group
+resource "azurerm_resource_group" "ravi18" {
+  name     ="ravi18"
+  location = "West Europe"
+}
